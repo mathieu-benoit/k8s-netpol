@@ -7,6 +7,9 @@ az aks create... \
   --network-plugin kubenet \
   --network-policy calico
 
+# Since we would like to allow DNS resolution from WEB and API to respectively call API and DB we need to create a Label on the kube-system Namespace
+kubectl label ns kube-system name=kube-system
+
 # Deploy WEB, API and DB Pods/Services
 ns=yournamespace
 kubectl create ns $ns
