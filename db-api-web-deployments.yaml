@@ -15,10 +15,10 @@ spec:
         app: db
     spec:
       containers:
-      - name: redis
-        image: redis
+      - name: couchdb
+        image: couchdb
         ports:
-        - containerPort: 6379
+        - containerPort: 5984
 ---
 apiVersion: v1
 kind: Service
@@ -29,8 +29,8 @@ spec:
     app: db
   ports:
     - name: db
-      port: 16379
-      targetPort: 6379
+      port: 15984
+      targetPort: 5984
   type: ClusterIP
 ---
 apiVersion: apps/v1
