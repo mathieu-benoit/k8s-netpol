@@ -1,5 +1,7 @@
 Kubernetes resources leveraged and illustrated by this blog article I wrote: [Kubernetes Network Policies, how to secure the communications between your pods](https://alwaysupalwayson.blogspot.com/2019/09/kubernetes-network-policies-how-to.html)
 
+![Deployments and NetworkPolicies Overview](db-api-web-deployments.png)
+
 To summarize, here are the bash commands you need to run:
 ```
 # Get you AKS cluster with Calico enabled
