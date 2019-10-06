@@ -6,7 +6,6 @@ To summarize, here are the bash commands you need to run:
 ```
 # Get you AKS cluster with Calico enabled
 az aks create... \
-  --network-plugin kubenet \
   --network-policy calico
 
 # Since we would like to allow DNS resolution from WEB and API to respectively call API and DB we need to create a Label on the kube-system Namespace
