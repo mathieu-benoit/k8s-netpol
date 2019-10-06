@@ -14,5 +14,5 @@ spec:
         matchLabels:
           app: api
     ports:
-     - port: 6379
+     - port: 5984
        protocol: TCP
