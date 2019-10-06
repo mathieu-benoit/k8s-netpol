@@ -50,8 +50,8 @@ spec:
         app: api
     spec:
       containers:
-      - name: aspnetapp
-        image: mcr.microsoft.com/dotnet/core/samples:aspnetapp
+      - name: outyet
+        image: goexample/outyet
         ports:
         - containerPort: 8080
 ---
