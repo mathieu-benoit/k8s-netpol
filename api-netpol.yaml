@@ -15,7 +15,7 @@ spec:
         matchLabels:
           app: web
     ports:
-     - port: 5984
+     - port: 3000
        protocol: TCP
   egress:
   - to:
