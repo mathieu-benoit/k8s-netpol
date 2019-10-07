@@ -22,6 +22,9 @@ spec:
     - podSelector:
         matchLabels:
           app: db
+    ports:
+     - port: 5984
+       protocol: TCP
   - to:
     - namespaceSelector:
         matchLabels:

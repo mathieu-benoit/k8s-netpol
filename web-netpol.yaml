@@ -19,6 +19,9 @@ spec:
     - podSelector:
         matchLabels:
           app: api
+    ports:
+     - port: 3000
+       protocol: TCP
   - to:
     - namespaceSelector:
         matchLabels:
