@@ -50,8 +50,8 @@ spec:
         app: api
     spec:
       containers:
-      - name: outyet
-        image: goexample/outyet
+      - name: nodebrady
+        image: mabenoit/nodebrady
         ports:
         - containerPort: 8080
 ---
