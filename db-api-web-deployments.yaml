@@ -15,10 +15,10 @@ spec:
         app: db
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: couchdb
+        image: couchdb
         ports:
-        - containerPort: 80
+        - containerPort: 5984
 ---
 apiVersion: v1
 kind: Service
@@ -29,8 +29,8 @@ spec:
     app: db
   ports:
     - name: db
-      port: 1433
-      targetPort: 80
+      port: 15984
+      targetPort: 5984
   type: ClusterIP
 ---
 apiVersion: apps/v1
@@ -50,10 +50,10 @@ spec:
         app: api
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: nodebrady
+        image: mabenoit/nodebrady
         ports:
-        - containerPort: 80
+        - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -65,7 +65,7 @@ spec:
   ports:
     - name: api
       port: 8080
-      targetPort: 80
+      targetPort: 3000
   type: ClusterIP
 ---
 apiVersion: apps/v1
