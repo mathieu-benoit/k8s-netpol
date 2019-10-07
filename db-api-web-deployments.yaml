@@ -53,7 +53,7 @@ spec:
       - name: nodebrady
         image: mabenoit/nodebrady
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -64,8 +64,8 @@ spec:
     app: api
   ports:
     - name: api
-      port: 8181
-      targetPort: 8080
+      port: 8080
+      targetPort: 3000
   type: ClusterIP
 ---
 apiVersion: apps/v1
